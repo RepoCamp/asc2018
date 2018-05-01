@@ -5,3 +5,11 @@ We encourage particpation from throughout the library and opensource communities
 <img align='right' height='100px' src='http://camp.curationexperts.com/sample-assets/DCE-Sm-Square.png' />
 
 For more information on how to use this repository, please visit the [WIKI](https://github.com/RepoCamp/asc2018/wiki).
+
+## Development Setup
+
+```sh
+$ git clone https://github.com/RepoCamp/asc2018.git camping; cd camping
+$ bundle install
+$ bin/rails ci
+```
