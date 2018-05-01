@@ -42,3 +42,8 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore dotenv files except test
+.env.development
+.env.production
+.env

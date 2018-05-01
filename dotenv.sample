@@ -1,0 +1,14 @@
+# This project expects to manage environment variables using dotenv
+# See https://github.com/bkeepers/dotenv for more details
+# Copy this file to .env.devlopment, .env.test, and .env.production to
+# manage environment variables in different environments as appropriate.
+PROJECT_NAME=asc2018
+SIDEKIQ_CONCURRENCY=5
+RAILS_HOST=localhost:3000
+DATABASE_NAME=asc2018
+DATABASE_USERNAME=hyrax_db_user
+DATABASE_PASSWORD=
+CONTACT_US_EMAIL=frodo@example.com
+FEDORA_URL=http://127.0.0.1:8080/fedora/rest
+FEDORA_PASSWORD=fedoraAdmin
+SOLR_URL=http://127.0.0.1:8983/solr/nurax
