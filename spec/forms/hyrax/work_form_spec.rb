@@ -1,9 +1,9 @@
-# Generated via
-#  `rails generate hyrax:work Work`
 require 'rails_helper'
 
 RSpec.describe Hyrax::WorkForm do
-  it "has tests" do
-    skip "Add your tests here"
-  end
+  subject(:form) { described_class.new(work, ability, controller) }
+
+  let(:ability)    { :none }
+  let(:controller) { :none }
+  let(:work)       { Work.new }
 end
