@@ -71,6 +71,7 @@ gem 'jquery-rails'
 gem 'devise'
 gem 'devise-guests', '~> 0.6'
 group :development, :test do
+  gem 'database_cleaner'
   gem 'fcrepo_wrapper'
   gem 'rspec-rails'
 end
