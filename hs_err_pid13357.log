@@ -1,0 +1,833 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 72351744 bytes for committing reserved memory.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_linux.cpp:2640), pid=13357, tid=0x00007f0bed74e700
+#
+# JRE version: OpenJDK Runtime Environment (8.0_162-b12) (build 1.8.0_162-b12)
+# Java VM: OpenJDK 64-Bit Server VM (25.162-b12 mixed mode linux-amd64 compressed oops)
+# Core dump written. Default location: /home/tjohnson/src/asc2018/core or core.13357
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f0c0013e800):  VMThread [stack: 0x00007f0bed64f000,0x00007f0bed74f000] [id=13363]
+
+Stack: [0x00007f0bed64f000,0x00007f0bed74f000],  sp=0x00007f0bed74d440,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0xaa80b2]
+V  [libjvm.so+0x4d92c7]
+V  [libjvm.so+0x8e3eb0]
+V  [libjvm.so+0x8de45e]
+V  [libjvm.so+0x95ea76]
+V  [libjvm.so+0x94d6ea]
+V  [libjvm.so+0x94d8b8]
+V  [libjvm.so+0x94e4c0]
+V  [libjvm.so+0x95485c]
+V  [libjvm.so+0x95c945]
+V  [libjvm.so+0x90b068]
+V  [libjvm.so+0xaa9d62]
+V  [libjvm.so+0xaaef06]
+V  [libjvm.so+0xaac651]
+V  [libjvm.so+0xaadaf3]
+V  [libjvm.so+0xaaded7]
+V  [libjvm.so+0x8e1322]
+
+VM_Operation (0x00007f0bec4991d0): ParallelGCFailedAllocation, mode: safepoint, requested by thread 0x00007f0c0046a800
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f0c0046c800 JavaThread "qtp1919892312-18" [_thread_blocked, id=13380, stack(0x00007f0bec299000,0x00007f0bec39a000)]
+  0x00007f0c0046a800 JavaThread "qtp1919892312-17" [_thread_blocked, id=13379, stack(0x00007f0bec39a000,0x00007f0bec49b000)]
+  0x00007f0c00468800 JavaThread "qtp1919892312-16" [_thread_blocked, id=13378, stack(0x00007f0bec49b000,0x00007f0bec59c000)]
+  0x00007f0c00466800 JavaThread "qtp1919892312-15" [_thread_blocked, id=13377, stack(0x00007f0bec59c000,0x00007f0bec69d000)]
+  0x00007f0c00465000 JavaThread "qtp1919892312-14" [_thread_blocked, id=13376, stack(0x00007f0bec69d000,0x00007f0bec79e000)]
+  0x00007f0c00463000 JavaThread "qtp1919892312-13" [_thread_blocked, id=13375, stack(0x00007f0bec79e000,0x00007f0bec89f000)]
+  0x00007f0c00462000 JavaThread "qtp1919892312-12" [_thread_blocked, id=13374, stack(0x00007f0bec89f000,0x00007f0bec9a0000)]
+  0x00007f0c0045e800 JavaThread "qtp1919892312-11" [_thread_blocked, id=13373, stack(0x00007f0bec9a0000,0x00007f0becaa1000)]
+  0x00007f0c0018f000 JavaThread "Service Thread" daemon [_thread_blocked, id=13370, stack(0x00007f0becdac000,0x00007f0becead000)]
+  0x00007f0c00184000 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=13369, stack(0x00007f0beceae000,0x00007f0becfae000)]
+  0x00007f0c00182000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=13368, stack(0x00007f0becfaf000,0x00007f0bed0af000)]
+  0x00007f0c0017f000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=13367, stack(0x00007f0bed0b0000,0x00007f0bed1b0000)]
+  0x00007f0c0017d800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=13366, stack(0x00007f0bed1b0000,0x00007f0bed2b1000)]
+  0x00007f0c0014b000 JavaThread "Finalizer" daemon [_thread_blocked, id=13365, stack(0x00007f0bed44c000,0x00007f0bed54d000)]
+  0x00007f0c00146800 JavaThread "Reference Handler" daemon [_thread_blocked, id=13364, stack(0x00007f0bed54d000,0x00007f0bed64e000)]
+  0x00007f0c0000a800 JavaThread "main" [_thread_blocked, id=13358, stack(0x00007f0c06561000,0x00007f0c06661000)]
+
+Other Threads:
+=>0x00007f0c0013e800 VMThread [stack: 0x00007f0bed64f000,0x00007f0bed74f000] [id=13363]
+  0x00007f0c00191800 WatcherThread [stack: 0x00007f0beccac000,0x00007f0becdac000] [id=13371]
+
+VM state:at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007f0c00007510] ExpandHeap_lock - owner thread: 0x00007f0c0013e800
+[0x00007f0c00007b90] Threads_lock - owner thread: 0x00007f0c0013e800
+[0x00007f0c00008090] Heap_lock - owner thread: 0x00007f0c0046a800
+
+Heap:
+ PSYoungGen      total 112640K, used 4226K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 80384K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000fa400000)
+  from space 32256K, 13% used [0x00000000fe080000,0x00000000fe4a0a58,0x0000000100000000)
+  to   space 47104K, 0% used [0x00000000fa400000,0x00000000fa400000,0x00000000fd200000)
+ ParOldGen       total 80896K, used 80772K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 99% used [0x00000000e0000000,0x00000000e4ee1110,0x00000000e4f00000)
+ Metaspace       used 8015K, capacity 8176K, committed 8448K, reserved 1056768K
+  class space    used 864K, capacity 916K, committed 1024K, reserved 1048576K
+
+Card table byte_map: [0x00007f0c04077000,0x00007f0c04178000] byte_map_base: 0x00007f0c03977000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f0c0584d0c0
+ Begin Bits: [0x00007f0bef1f1000, 0x00007f0bef9f1000)
+ End Bits:   [0x00007f0bef9f1000, 0x00007f0bf01f1000)
+
+Polling page: 0x00007f0c0668c000
+
+CodeCache: size=245760Kb used=5566Kb max_used=5581Kb free=240193Kb
+ bounds [0x00007f0bf09b5000, 0x00007f0bf0f35000, 0x00007f0bff9b5000]
+ total_blobs=1436 nmethods=1148 adapters=202
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 3.826 Thread 0x00007f0c0017f000 nmethod 1160 0x00007f0bf0ef3c90 code [0x00007f0bf0ef3de0, 0x00007f0bf0ef3ed8]
+Event: 3.826 Thread 0x00007f0c0017f000 1158       4       org.eclipse.jetty.annotations.AnnotationParser::parseJarEntry (181 bytes)
+Event: 3.837 Thread 0x00007f0c00182000 nmethod 1126 0x00007f0bf0f2be10 code [0x00007f0bf0f2c0c0, 0x00007f0bf0f2e178]
+Event: 3.837 Thread 0x00007f0c00182000 1097       4       java.net.URI::defineString (289 bytes)
+Event: 3.837 Thread 0x00007f0c00182000 nmethod 1097 0x00007f0bf0e37350 code [0x00007f0bf0e374a0, 0x00007f0bf0e37518]
+Event: 3.837 Thread 0x00007f0c00182000 1152       4       org.objectweb.asm.ClassVisitor::<init> (35 bytes)
+Event: 3.838 Thread 0x00007f0c00182000 nmethod 1152 0x00007f0bf0efd510 code [0x00007f0bf0efd660, 0x00007f0bf0efd738]
+Event: 3.838 Thread 0x00007f0c00182000 1159   !   4       org.eclipse.jetty.util.resource.Resource::newResource (134 bytes)
+Event: 3.842 Thread 0x00007f0c00182000 nmethod 1159 0x00007f0bf0efc9d0 code [0x00007f0bf0efcbe0, 0x00007f0bf0efd0c0]
+Event: 3.842 Thread 0x00007f0c00182000 1092   !   4       java.io.File::toURI (69 bytes)
+
+GC Heap History (10 events):
+Event: 1.407 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 66048K, used 2784K [0x00000000f5580000, 0x00000000f9a80000, 0x0000000100000000)
+  eden space 61440K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000f9180000)
+  from space 4608K, 60% used [0x00000000f9600000,0x00000000f98b8050,0x00000000f9a80000)
+  to   space 4608K, 0% used [0x00000000f9180000,0x00000000f9180000,0x00000000f9600000)
+ ParOldGen       total 80896K, used 88K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 0% used [0x00000000e0000000,0x00000000e0016010,0x00000000e4f00000)
+ Metaspace       used 6878K, capacity 7018K, committed 7296K, reserved 1056768K
+  class space    used 750K, capacity 786K, committed 896K, reserved 1048576K
+}
+Event: 1.737 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 66048K, used 64224K [0x00000000f5580000, 0x00000000f9a80000, 0x0000000100000000)
+  eden space 61440K, 100% used [0x00000000f5580000,0x00000000f9180000,0x00000000f9180000)
+  from space 4608K, 60% used [0x00000000f9600000,0x00000000f98b8050,0x00000000f9a80000)
+  to   space 4608K, 0% used [0x00000000f9180000,0x00000000f9180000,0x00000000f9600000)
+ ParOldGen       total 80896K, used 88K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 0% used [0x00000000e0000000,0x00000000e0016108,0x00000000e4f00000)
+ Metaspace       used 7957K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+Event: 1.752 GC heap after
+Heap after GC invocations=5 (full 0):
+ PSYoungGen      total 66048K, used 4597K [0x00000000f5580000, 0x00000000fdb80000, 0x0000000100000000)
+  eden space 61440K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000f9180000)
+  from space 4608K, 99% used [0x00000000f9180000,0x00000000f95fd4d0,0x00000000f9600000)
+  to   space 7168K, 0% used [0x00000000fd480000,0x00000000fd480000,0x00000000fdb80000)
+ ParOldGen       total 80896K, used 3160K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 3% used [0x00000000e0000000,0x00000000e0316050,0x00000000e4f00000)
+ Metaspace       used 7957K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+}
+Event: 2.234 GC heap before
+{Heap before GC invocations=6 (full 0):
+ PSYoungGen      total 66048K, used 66037K [0x00000000f5580000, 0x00000000fdb80000, 0x0000000100000000)
+  eden space 61440K, 100% used [0x00000000f5580000,0x00000000f9180000,0x00000000f9180000)
+  from space 4608K, 99% used [0x00000000f9180000,0x00000000f95fd4d0,0x00000000f9600000)
+  to   space 7168K, 0% used [0x00000000fd480000,0x00000000fd480000,0x00000000fdb80000)
+ ParOldGen       total 80896K, used 3164K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 3% used [0x00000000e0000000,0x00000000e0317110,0x00000000e4f00000)
+ Metaspace       used 7968K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+Event: 2.255 GC heap after
+Heap after GC invocations=6 (full 0):
+ PSYoungGen      total 119808K, used 7139K [0x00000000f5580000, 0x00000000fef80000, 0x0000000100000000)
+  eden space 112640K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000fc380000)
+  from space 7168K, 99% used [0x00000000fd480000,0x00000000fdb78c68,0x00000000fdb80000)
+  to   space 17408K, 0% used [0x00000000fc380000,0x00000000fc380000,0x00000000fd480000)
+ ParOldGen       total 80896K, used 18648K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 23% used [0x00000000e0000000,0x00000000e1236108,0x00000000e4f00000)
+ Metaspace       used 7968K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+}
+Event: 3.081 GC heap before
+{Heap before GC invocations=7 (full 0):
+ PSYoungGen      total 119808K, used 119779K [0x00000000f5580000, 0x00000000fef80000, 0x0000000100000000)
+  eden space 112640K, 100% used [0x00000000f5580000,0x00000000fc380000,0x00000000fc380000)
+  from space 7168K, 99% used [0x00000000fd480000,0x00000000fdb78c68,0x00000000fdb80000)
+  to   space 17408K, 0% used [0x00000000fc380000,0x00000000fc380000,0x00000000fd480000)
+ ParOldGen       total 80896K, used 18654K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 23% used [0x00000000e0000000,0x00000000e1237970,0x00000000e4f00000)
+ Metaspace       used 7976K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+Event: 3.106 GC heap after
+Heap after GC invocations=7 (full 0):
+ PSYoungGen      total 130048K, used 17393K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 112640K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000fc380000)
+  from space 17408K, 99% used [0x00000000fc380000,0x00000000fd47c748,0x00000000fd480000)
+  to   space 32256K, 0% used [0x00000000fe080000,0x00000000fe080000,0x0000000100000000)
+ ParOldGen       total 80896K, used 41248K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 50% used [0x00000000e0000000,0x00000000e28482e8,0x00000000e4f00000)
+ Metaspace       used 7976K, capacity 8112K, committed 8448K, reserved 1056768K
+  class space    used 863K, capacity 916K, committed 1024K, reserved 1048576K
+}
+Event: 3.890 GC heap before
+{Heap before GC invocations=8 (full 0):
+ PSYoungGen      total 130048K, used 130033K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 112640K, 100% used [0x00000000f5580000,0x00000000fc380000,0x00000000fc380000)
+  from space 17408K, 99% used [0x00000000fc380000,0x00000000fd47c748,0x00000000fd480000)
+  to   space 32256K, 0% used [0x00000000fe080000,0x00000000fe080000,0x0000000100000000)
+ ParOldGen       total 80896K, used 41248K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 50% used [0x00000000e0000000,0x00000000e28482e8,0x00000000e4f00000)
+ Metaspace       used 8015K, capacity 8176K, committed 8448K, reserved 1056768K
+  class space    used 864K, capacity 916K, committed 1024K, reserved 1048576K
+Event: 3.950 GC heap after
+Heap after GC invocations=8 (full 0):
+ PSYoungGen      total 112640K, used 32241K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 80384K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000fa400000)
+  from space 32256K, 99% used [0x00000000fe080000,0x00000000ffffc730,0x0000000100000000)
+  to   space 47104K, 0% used [0x00000000fa400000,0x00000000fa400000,0x00000000fd200000)
+ ParOldGen       total 80896K, used 59512K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 73% used [0x00000000e0000000,0x00000000e3a1e2a0,0x00000000e4f00000)
+ Metaspace       used 8015K, capacity 8176K, committed 8448K, reserved 1056768K
+  class space    used 864K, capacity 916K, committed 1024K, reserved 1048576K
+}
+Event: 3.950 GC heap before
+{Heap before GC invocations=9 (full 1):
+ PSYoungGen      total 112640K, used 32241K [0x00000000f5580000, 0x0000000100000000, 0x0000000100000000)
+  eden space 80384K, 0% used [0x00000000f5580000,0x00000000f5580000,0x00000000fa400000)
+  from space 32256K, 99% used [0x00000000fe080000,0x00000000ffffc730,0x0000000100000000)
+  to   space 47104K, 0% used [0x00000000fa400000,0x00000000fa400000,0x00000000fd200000)
+ ParOldGen       total 80896K, used 59512K [0x00000000e0000000, 0x00000000e4f00000, 0x00000000f5580000)
+  object space 80896K, 73% used [0x00000000e0000000,0x00000000e3a1e2a0,0x00000000e4f00000)
+ Metaspace       used 8015K, capacity 8176K, committed 8448K, reserved 1056768K
+  class space    used 864K, capacity 916K, committed 1024K, reserved 1048576K
+
+Deoptimization events (10 events):
+Event: 1.686 Thread 0x00007f0c00465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0dd85c4 method=org.objectweb.asm.ClassReader.readUTF8(I[C)Ljava/lang/String; @ 7
+Event: 1.718 Thread 0x00007f0c0046c800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0bb735c method=sun.nio.cs.UTF_8$Decoder.decode([BII[C)I @ 30
+Event: 1.962 Thread 0x00007f0c00465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e0dd14 method=org.objectweb.asm.ClassReader.a(II[C)Ljava/lang/String; @ 77
+Event: 1.963 Thread 0x00007f0c00465000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0db08d0 method=org.objectweb.asm.ClassReader.a(II[C)Ljava/lang/String; @ 77
+Event: 1.979 Thread 0x00007f0c00466800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e30f24 method=org.objectweb.asm.ClassReader.b(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/Context;I)I @ 833
+Event: 2.557 Thread 0x00007f0c0046a800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e4f160 method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 113
+Event: 2.657 Thread 0x00007f0c0046c800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0d97a88 method=java.util.jar.Manifest$FastInputStream.readLine([BII)I @ 87
+Event: 3.223 Thread 0x00007f0c0046c800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e6da78 method=org.objectweb.asm.ClassReader.b(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/Context;I)I @ 1038
+Event: 3.265 Thread 0x00007f0c00462000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e1f100 method=org.eclipse.jetty.webapp.ClasspathPattern.match(Ljava/lang/String;)Z @ 178
+Event: 3.616 Thread 0x00007f0c00462000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00007f0bf0e5bb58 method=org.objectweb.asm.ClassReader.a(Lorg/objectweb/asm/ClassVisitor;Lorg/objectweb/asm/Context;I)I @ 201
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 1.616 Thread 0x00007f0c0000a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f83d2ca0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u162-b12/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.617 Thread 0x00007f0c0000a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f83e4140) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u162-b12/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.617 Thread 0x00007f0c0000a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f83e4538) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u162-b12/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.617 Thread 0x00007f0c0000a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f83e58a8) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u162-b12/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.617 Thread 0x00007f0c0000a800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000f83e5ca0) thrown at [/build/java8-openjdk/src/jdk8u-jdk8u162-b12/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 1.621 Thread 0x00007f0c0045e800 Implicit null exception at 0x00007f0bf0d8a0f2 to 0x00007f0bf0d8a7c1
+Event: 1.624 Thread 0x00007f0c00462000 Implicit null exception at 0x00007f0bf0d8563c to 0x00007f0bf0d85701
+Event: 1.624 Thread 0x00007f0c00466800 Implicit null exception at 0x00007f0bf0b14c4c to 0x00007f0bf0b14fb9
+Event: 1.624 Thread 0x00007f0c00465000 Implicit null exception at 0x00007f0bf0b14c4c to 0x00007f0bf0b14fb9
+Event: 1.624 Thread 0x00007f0c00462000 Implicit null exception at 0x00007f0bf0b182be to 0x00007f0bf0b185a1
+
+Events (10 events):
+Event: 3.223 Thread 0x00007f0c0046c800 DEOPT UNPACKING pc=0x00007f0bf09fa47a sp=0x00007f0bec3982e0 mode 2
+Event: 3.223 loading class org/objectweb/asm/Type
+Event: 3.223 loading class org/objectweb/asm/Type done
+Event: 3.265 Thread 0x00007f0c00462000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007f0bf0e1f100
+Event: 3.265 Thread 0x00007f0c00462000 DEOPT PACKING pc=0x00007f0bf0e1f100 sp=0x00007f0bec99e4b0
+Event: 3.265 Thread 0x00007f0c00462000 DEOPT UNPACKING pc=0x00007f0bf09fa47a sp=0x00007f0bec99e460 mode 2
+Event: 3.616 Thread 0x00007f0c00462000 Uncommon trap: trap_request=0xffffff65 fr.pc=0x00007f0bf0e5bb58
+Event: 3.616 Thread 0x00007f0c00462000 DEOPT PACKING pc=0x00007f0bf0e5bb58 sp=0x00007f0bec99e350
+Event: 3.616 Thread 0x00007f0c00462000 DEOPT UNPACKING pc=0x00007f0bf09fa47a sp=0x00007f0bec99e308 mode 2
+Event: 3.890 Executing VM operation: ParallelGCFailedAllocation
+
+
+Dynamic libraries:
+e0000000-e4f00000 rw-p 00000000 00:00 0 
+e9400000-f5580000 ---p 00000000 00:00 0 
+f5580000-100000000 rw-p 00000000 00:00 0 
+100000000-100100000 rw-p 00000000 00:00 0 
+100100000-140000000 ---p 00000000 00:00 0 
+563d8c0af000-563d8c0b0000 r-xp 00000000 08:03 431914                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+563d8c2af000-563d8c2b0000 r--p 00000000 08:03 431914                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+563d8c2b0000-563d8c2b1000 rw-p 00001000 08:03 431914                     /usr/lib/jvm/java-8-openjdk/jre/bin/java
+563d8c93f000-563d8c960000 rw-p 00000000 00:00 0                          [heap]
+7f0b88000000-7f0b8923a000 rw-p 00000000 00:00 0 
+7f0b8923a000-7f0b8c000000 ---p 00000000 00:00 0 
+7f0b8c000000-7f0b8c9b4000 rw-p 00000000 00:00 0 
+7f0b8c9b4000-7f0b90000000 ---p 00000000 00:00 0 
+7f0b90000000-7f0b908a1000 rw-p 00000000 00:00 0 
+7f0b908a1000-7f0b94000000 ---p 00000000 00:00 0 
+7f0b97ec2000-7f0b97ec5000 r--s 0001d000 00:28 2456564                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/HikariCP-2.4.3.jar
+7f0b97ec5000-7f0b97ed8000 r--s 0010a000 00:28 2456565                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-broker-5.14.1.jar
+7f0b97ed8000-7f0b97ef1000 r--s 00143000 00:28 2456566                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-client-5.14.1.jar
+7f0b97ef1000-7f0b97ef3000 r--s 0000b000 00:28 2456567                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-jms-pool-5.14.1.jar
+7f0b97ef3000-7f0b97eff000 r--s 00097000 00:28 2456568                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-kahadb-store-5.14.1.jar
+7f0b97eff000-7f0b97f0c000 r--s 0009b000 00:28 2456569                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-openwire-legacy-5.14.1.jar
+7f0b97f0c000-7f0b97f0e000 r--s 00004000 00:28 2456570                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-pool-5.14.1.jar
+7f0b97f0e000-7f0b97f11000 r--s 00022000 00:28 2456571                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-protobuf-1.1.jar
+7f0b97f11000-7f0b97f13000 r--s 00028000 00:28 2456572                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-spring-5.14.1.jar
+7f0b97f13000-7f0b97f16000 r--s 00018000 00:28 2456573                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/activemq-stomp-5.14.1.jar
+7f0b97f16000-7f0b97f18000 r--s 00002000 00:28 2456574                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/aopalliance-repackaged-2.5.0-b05.jar
+7f0b97f18000-7f0b97f1f000 r--s 0005d000 00:28 2456575                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/asm-all-repackaged-2.5.0-b05.jar
+7f0b97f1f000-7f0b97f32000 r--s 000b4000 00:28 2456576                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/bean-validator-2.5.0-b05.jar
+7f0b97f32000-7f0b97f39000 r--s 00073000 00:28 2460673                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/c3p0-0.9.5.2.jar
+7f0b97f39000-7f0b97f4f000 r--s 000d6000 00:28 2460674                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/caffeine-2.3.3.jar
+7f0b97f4f000-7f0b97f52000 r--s 00013000 00:28 2460675                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/class-model-2.5.0-b05.jar
+7f0b97f52000-7f0b97f57000 r--s 00023000 00:28 2460676                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/collection-0.6.jar
+7f0b97f57000-7f0b97f59000 r--s 00014000 00:28 2460677                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-chain-1.1.jar
+7f0b97f59000-7f0b97f5a000 r--s 0000c000 00:28 2460678                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-cli-1.3.jar
+7f0b97f5a000-7f0b97f61000 r--s 0003f000 00:28 2460679                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-codec-1.10.jar
+7f0b97f61000-7f0b97f6f000 r--s 0007f000 00:28 2460680                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-collections-3.2.1.jar
+7f0b97f6f000-7f0b97f73000 r--s 00020000 00:28 2460682                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-digester-1.8.jar
+7f0b97f73000-7f0b97f77000 r--s 0002f000 00:28 2460683                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-io-2.5.jar
+7f0b97f77000-7f0b97f7b000 r--s 0003c000 00:28 2460684                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-lang-2.4.jar
+7f0b97f7b000-7f0b97f83000 r--s 0006e000 00:28 2460685                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-lang3-3.5.jar
+7f0b97f83000-7f0b97f89000 r--s 00045000 00:28 2460686                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-net-3.5.jar
+7f0b97f89000-7f0b97f8c000 r--s 00019000 00:28 2460687                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-pool2-2.4.2.jar
+7f0b97f8c000-7f0b97f8f000 r--s 0001f000 00:28 2460688                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-validator-1.3.1.jar
+7f0b97f8f000-7f0b97f91000 r--s 00001000 00:28 2460689                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/config-types-2.5.0-b05.jar
+7f0b97f91000-7f0b97f93000 r--s 00003000 00:28 2460690                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-auth-common-4.7.3.jar
+7f0b97f93000-7f0b97f95000 r--s 00002000 00:28 2460691                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-event-serialization-4.7.3.jar
+7f0b97f95000-7f0b97f98000 r--s 00012000 00:28 2460692                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-http-api-4.7.3.jar
+7f0b97f98000-7f0b97f9b000 r--s 00016000 00:28 2460693                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-http-commons-4.7.3.jar
+7f0b97f9b000-7f0b97f9d000 r--s 00001000 00:28 2460694                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-jms-4.7.3.jar
+7f0b97f9d000-7f0b97fa0000 r--s 0000a000 00:28 2460695                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-kernel-api-4.7.3.jar
+7f0b97fa0000-7f0b97fa3000 r--s 0002b000 00:28 2460696                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-kernel-modeshape-4.7.3.jar
+7f0b97fa3000-7f0b97fa5000 r--s 00001000 00:28 2460697                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/fcrepo-metrics-4.7.3.jar
+7f0b97fa5000-7f0b97fa7000 r--s 00003000 00:28 2460698                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/geronimo-j2ee-management_1.1_spec-1.0.1.jar
+7f0b97fa7000-7f0b97fa9000 r--s 00006000 00:28 2460699                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/geronimo-jms_1.1_spec-1.1.1.jar
+7f0b97fa9000-7f0b97fab000 r--s 00002000 00:28 2460700                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/geronimo-jta_1.0.1B_spec-1.0.1.jar
+7f0b97fab000-7f0b97fda000 r--s 00226000 00:28 2460701                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/guava-20.0.jar
+7f0b97fda000-7f0b97fe8000 r--s 001a1000 00:28 2460702                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/h2-1.4.191.jar
+7f0b97fe8000-7f0b97fea000 r--s 0000b000 00:28 2460703                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hawtbuf-1.11.jar
+7f0b97fea000-7f0b97fef000 r--s 00027000 00:28 2460705                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-api-2.5.0-b05.jar
+7f0b97fef000-7f0b97ff4000 r--s 0002e000 00:28 2460706                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-config-2.5.0-b05.jar
+7f0b97ff4000-7f0b97ff7000 r--s 0001a000 00:28 2460707                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-core-2.5.0-b05.jar
+7f0b97ff7000-7f0b97ffa000 r--s 0002a000 00:28 2460708                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-locator-2.5.0-b05.jar
+7f0b97ffa000-7f0b97ffc000 r--s 0000c000 00:28 2460709                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-runlevel-2.5.0-b05.jar
+7f0b97ffc000-7f0b98000000 r--s 0001a000 00:28 2460710                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-utils-2.5.0-b05.jar
+7f0b98000000-7f0b9aa4a000 rw-p 00000000 00:00 0 
+7f0b9aa4a000-7f0b9c000000 ---p 00000000 00:00 0 
+7f0b9c000000-7f0b9fffb000 rw-p 00000000 00:00 0 
+7f0b9fffb000-7f0ba0000000 ---p 00000000 00:00 0 
+7f0ba0000000-7f0ba3ffc000 rw-p 00000000 00:00 0 
+7f0ba3ffc000-7f0ba4000000 ---p 00000000 00:00 0 
+7f0ba4000000-7f0ba6ced000 rw-p 00000000 00:00 0 
+7f0ba6ced000-7f0ba8000000 ---p 00000000 00:00 0 
+7f0ba8000000-7f0babdb7000 rw-p 00000000 00:00 0 
+7f0babdb7000-7f0bac000000 ---p 00000000 00:00 0 
+7f0bac000000-7f0bafffe000 rw-p 00000000 00:00 0 
+7f0bafffe000-7f0bb0000000 ---p 00000000 00:00 0 
+7f0bb0000000-7f0bb3834000 rw-p 00000000 00:00 0 
+7f0bb3834000-7f0bb4000000 ---p 00000000 00:00 0 
+7f0bb4000000-7f0bb6243000 rw-p 00000000 00:00 0 
+7f0bb6243000-7f0bb8000000 ---p 00000000 00:00 0 
+7f0bb8000000-7f0bb8021000 rw-p 00000000 00:00 0 
+7f0bb8021000-7f0bbc000000 ---p 00000000 00:00 0 
+7f0bbc000000-7f0bbc021000 rw-p 00000000 00:00 0 
+7f0bbc021000-7f0bc0000000 ---p 00000000 00:00 0 
+7f0bc0000000-7f0bc1348000 rw-p 00000000 00:00 0 
+7f0bc1348000-7f0bc4000000 ---p 00000000 00:00 0 
+7f0bc4000000-7f0bc43ae000 rw-p 00000000 00:00 0 
+7f0bc43ae000-7f0bc8000000 ---p 00000000 00:00 0 
+7f0bc8000000-7f0bc8021000 rw-p 00000000 00:00 0 
+7f0bc8021000-7f0bcc000000 ---p 00000000 00:00 0 
+7f0bcc000000-7f0bcd30e000 rw-p 00000000 00:00 0 
+7f0bcd30e000-7f0bd0000000 ---p 00000000 00:00 0 
+7f0bd0000000-7f0bd0021000 rw-p 00000000 00:00 0 
+7f0bd0021000-7f0bd4000000 ---p 00000000 00:00 0 
+7f0bd4000000-7f0bd4021000 rw-p 00000000 00:00 0 
+7f0bd4021000-7f0bd8000000 ---p 00000000 00:00 0 
+7f0bd8000000-7f0bd8021000 rw-p 00000000 00:00 0 
+7f0bd8021000-7f0bdc000000 ---p 00000000 00:00 0 
+7f0bdc000000-7f0bdc021000 rw-p 00000000 00:00 0 
+7f0bdc021000-7f0be0000000 ---p 00000000 00:00 0 
+7f0be0000000-7f0be0021000 rw-p 00000000 00:00 0 
+7f0be0021000-7f0be4000000 ---p 00000000 00:00 0 
+7f0be4000000-7f0be4021000 rw-p 00000000 00:00 0 
+7f0be4021000-7f0be8000000 ---p 00000000 00:00 0 
+7f0be8000000-7f0be8021000 rw-p 00000000 00:00 0 
+7f0be8021000-7f0bec000000 ---p 00000000 00:00 0 
+7f0bec000000-7f0bec001000 r--s 00009000 00:28 2460681                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/commons-csv-1.3.jar
+7f0bec001000-7f0bec00e000 r--s 000a4000 00:28 2460711                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/httpclient-4.4.1.jar
+7f0bec00e000-7f0bec011000 r--s 00024000 00:28 2460712                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/httpclient-cache-4.4.1.jar
+7f0bec011000-7f0bec018000 r--s 00048000 00:28 2460713                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/httpcore-4.4.1.jar
+7f0bec018000-7f0bec01b000 r--s 0000b000 00:28 2460714                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-annotations-2.8.4.jar
+7f0bec01b000-7f0bec01f000 r--s 00041000 00:28 2460715                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-core-2.8.4.jar
+7f0bec01f000-7f0bec031000 r--s 0011c000 00:28 2460716                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-databind-2.8.4.jar
+7f0bec031000-7f0bec034000 r--s 00014000 00:28 2460717                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-datatype-jsr310-2.8.4.jar
+7f0bec034000-7f0bec04e000 r--s 0013f000 00:28 2460732                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-core-3.1.1.jar
+7f0bec04e000-7f0bec050000 r--s 00020000 00:28 2460733                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-iri-3.1.1.jar
+7f0bec050000-7f0bec052000 r--s 0000b000 00:28 2460734                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-patch-4.7.3.jar
+7f0bec052000-7f0bec053000 r--s 00000000 00:28 2460704                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/hk2-2.5.0-b05.jar
+7f0bec053000-7f0bec055000 r--s 00006000 00:28 2460718                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-jaxrs-base-2.5.4.jar
+7f0bec055000-7f0bec057000 r--s 00003000 00:28 2460719                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-jaxrs-json-provider-2.5.4.jar
+7f0bec057000-7f0bec058000 r--s 00007000 00:28 2460720                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jackson-module-jaxb-annotations-2.5.4.jar
+7f0bec058000-7f0bec062000 r--s 000a5000 00:28 2460721                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/javassist-3.18.1-GA.jar
+7f0bec062000-7f0bec064000 r--s 00005000 00:28 2460722                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/javax.annotation-api-1.2.jar
+7f0bec064000-7f0bec065000 r--s 00000000 00:28 2460723                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/javax.inject-1.jar
+7f0bec065000-7f0bec066000 r--s 00001000 00:28 2460724                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/javax.inject-2.3.0.jar
+7f0bec066000-7f0bec06a000 r--s 00019000 00:28 2460725                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/javax.ws.rs-api-2.0.1.jar
+7f0bec06a000-7f0bec06b000 r--s 00006000 00:28 2460726                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.0.1.Final.jar
+7f0bec06b000-7f0bec079000 r--s 000a5000 00:28 2460727                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jbossjta-4.16.6.Final.jar
+7f0bec079000-7f0bec07b000 r--s 00003000 00:28 2460728                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jcl-over-slf4j-1.7.21.jar
+7f0bec07b000-7f0bec07e000 r--s 0000e000 00:28 2460729                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jcr-2.0.jar
+7f0bec07e000-7f0bec0b1000 r--s 00287000 00:28 2460730                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-arq-3.1.1.jar
+7f0bec0b1000-7f0bec0b6000 r--s 00031000 00:28 2460731                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-base-3.1.1.jar
+7f0bec0b6000-7f0bec0ea000 r--s 0020e000 00:28 2460735                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-shaded-guava-3.1.1.jar
+7f0bec0ea000-7f0bec0f4000 r--s 00078000 00:28 2460736                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jena-tdb-3.1.1.jar
+7f0bec0f4000-7f0bec0f9000 r--s 00025000 00:28 2460737                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-client-2.24.jar
+7f0bec0f9000-7f0bec108000 r--s 000a0000 00:28 2460738                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-common-2.24.jar
+7f0bec108000-7f0bec10b000 r--s 0000e000 00:28 2460739                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-container-servlet-core-2.24.jar
+7f0bec10b000-7f0bec10e000 r--s 0000f000 00:28 2460740                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-entity-filtering-2.24.jar
+7f0bec10e000-7f0bec126000 r--s 000d6000 00:28 2460741                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-guava-2.24.jar
+7f0bec126000-7f0bec128000 r--s 00010000 00:28 2460742                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-media-jaxb-2.24.jar
+7f0bec128000-7f0bec12a000 r--s 00004000 00:28 2460743                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-media-json-jackson-2.24.jar
+7f0bec12a000-7f0bec12d000 r--s 0000e000 00:28 2460744                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-media-multipart-2.24.jar
+7f0bec12d000-7f0bec142000 r--s 000d1000 00:28 2460745                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-server-2.24.jar
+7f0bec142000-7f0bec144000 r--s 00004000 00:28 2460746                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jersey-spring3-2.24.jar
+7f0bec144000-7f0bec145000 r--s 00003000 00:28 2460747                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-continuation-9.3.1.v20150714.jar
+7f0bec145000-7f0bec147000 r--s 0000b000 00:28 2460748                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-deploy-9.3.1.v20150714.jar
+7f0bec147000-7f0bec149000 r--s 0001a000 00:28 2460749                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-http-9.3.1.v20150714.jar
+7f0bec149000-7f0bec14c000 r--s 00017000 00:28 2460750                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-io-9.3.1.v20150714.jar
+7f0bec14c000-7f0bec14e000 r--s 00004000 00:28 2460751                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-jmx-9.3.1.v20150714.jar
+7f0bec14e000-7f0bec151000 r--s 00014000 00:28 2460752                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-security-9.3.1.v20150714.jar
+7f0bec151000-7f0bec158000 r--s 0006a000 00:28 2460753                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-server-9.3.1.v20150714.jar
+7f0bec158000-7f0bec15a000 r--s 0001a000 00:28 2460754                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-servlet-9.3.1.v20150714.jar
+7f0bec15a000-7f0bec15c000 r--s 00013000 00:28 2460755                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-servlets-9.3.1.v20150714.jar
+7f0bec15c000-7f0bec163000 r--s 0005c000 00:28 2460756                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-util-9.3.1.v20150714.jar
+7f0bec163000-7f0bec165000 r--s 00019000 00:28 2460757                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-webapp-9.3.1.v20150714.jar
+7f0bec165000-7f0bec167000 r--s 0000b000 00:28 2460758                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jetty-xml-9.3.1.v20150714.jar
+7f0bec167000-7f0bec181000 r--s 00248000 00:28 2460759                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jgroups-3.6.11.Final.jar
+7f0bec181000-7f0bec183000 r--s 0001c000 00:28 2460760                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/jsonld-java-0.8.3.jar
+7f0bec183000-7f0bec189000 r--s 00034000 00:28 2460761                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/libthrift-0.9.3.jar
+7f0bec189000-7f0bec190000 r--s 00044000 00:28 2460762                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/logback-classic-1.1.7.jar
+7f0bec190000-7f0bec19a000 r--s 00069000 00:28 2460763                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/logback-core-1.1.7.jar
+7f0bec19a000-7f0bec19f000 r--s 00061000 00:28 2460764                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/mapdb-1.0.9.jar
+7f0bec19f000-7f0bec1af000 r--s 00085000 00:28 2460765                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/mchange-commons-java-0.2.11.jar
+7f0bec1af000-7f0bec1b0000 r--s 00001000 00:28 2460766                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-annotation-3.1.2.jar
+7f0bec1b0000-7f0bec1b4000 r--s 00018000 00:28 2460767                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-core-3.1.2.jar
+7f0bec1b4000-7f0bec1b6000 r--s 00004000 00:28 2460768                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-graphite-3.1.2.jar
+7f0bec1b6000-7f0bec1b7000 r--s 00002000 00:28 2460769                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-healthchecks-3.1.2.jar
+7f0bec1b7000-7f0bec1b9000 r--s 00002000 00:28 2460770                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-jersey2-3.1.2.jar
+7f0bec1b9000-7f0bec1ba000 r--s 00003000 00:28 2460771                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-json-3.1.2.jar
+7f0bec1ba000-7f0bec1bc000 r--s 00008000 00:28 2460772                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-jvm-3.1.2.jar
+7f0bec1bc000-7f0bec1be000 r--s 00003000 00:28 2460773                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/metrics-servlets-3.1.2.jar
+7f0bec1be000-7f0bec1c0000 r--s 0000e000 00:28 2460774                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/mimepull-1.9.6.jar
+7f0bec1c0000-7f0bec1c7000 r--s 0004b000 00:28 2460775                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-common-5.2.0.Final.jar
+7f0bec1c7000-7f0bec1ec000 r--s 00259000 00:28 2460776                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-jcr-5.2.0.Final.jar
+7f0bec1ec000-7f0bec1ef000 r--s 00011000 00:28 2460777                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-jcr-api-5.2.0.Final.jar
+7f0bec1ef000-7f0bec1f0000 r--s 00002000 00:28 2460778                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-persistence-file-5.2.0.Final.jar
+7f0bec1f0000-7f0bec1f2000 r--s 0000a000 00:28 2460779                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-persistence-relational-5.2.0.Final.jar
+7f0bec1f2000-7f0bec1f8000 r--s 0003f000 00:28 2460780                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-schematic-5.2.0.Final.jar
+7f0bec1f8000-7f0bec1fa000 r--s 00001000 00:28 2460781                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/modeshape-web-jcr-5.2.0.Final.jar
+7f0bec1fa000-7f0bec204000 r--s 000e7000 00:28 2460782                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/mysql-connector-java-5.1.38.jar
+7f0bec204000-7f0bec206000 r--s 0000e000 00:28 2460783                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/oro-2.0.8.jar
+7f0bec206000-7f0bec20d000 r--s 0009f000 00:28 2460785                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/postgresql-9.4.1211.jar
+7f0bec20d000-7f0bec20f000 r--s 00009000 00:28 2460786                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/slf4j-api-1.7.21.jar
+7f0bec20f000-7f0bec218000 r--s 00054000 00:28 2460787                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-aop-4.3.3.RELEASE.jar
+7f0bec218000-7f0bec226000 r--s 000ac000 00:28 2460788                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-beans-4.3.3.RELEASE.jar
+7f0bec226000-7f0bec228000 r--s 00002000 00:28 2460789                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-bridge-2.5.0-b05.jar
+7f0bec228000-7f0bec242000 r--s 000fc000 00:28 2460790                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-context-4.3.3.RELEASE.jar
+7f0bec242000-7f0bec259000 r--s 000f9000 00:28 2460791                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-core-4.3.3.RELEASE.jar
+7f0bec259000-7f0bec25e000 r--s 0003c000 00:28 2460792                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-expression-4.3.3.RELEASE.jar
+7f0bec25e000-7f0bec270000 r--s 000b5000 00:28 2460793                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/spring-web-4.3.3.RELEASE.jar
+7f0bec270000-7f0bec272000 r--s 00005000 00:28 2460794                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/sslext-1.2-0.jar
+7f0bec272000-7f0bec274000 r--s 00003000 00:28 2460795                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/tiger-types-1.4.jar
+7f0bec274000-7f0bec27c000 r--s 00087000 00:28 2460796                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/tika-core-1.12.jar
+7f0bec27c000-7f0bec280000 r--s 0000c000 00:28 2460797                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/validation-api-1.1.0.Final.jar
+7f0bec280000-7f0bec299000 r--s 00135000 00:28 2460801                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/xercesImpl-2.11.0.jar
+7f0bec299000-7f0bec29c000 ---p 00000000 00:00 0 
+7f0bec29c000-7f0bec39a000 rw-p 00000000 00:00 0 
+7f0bec39a000-7f0bec39d000 ---p 00000000 00:00 0 
+7f0bec39d000-7f0bec49b000 rw-p 00000000 00:00 0 
+7f0bec49b000-7f0bec49e000 ---p 00000000 00:00 0 
+7f0bec49e000-7f0bec59c000 rw-p 00000000 00:00 0 
+7f0bec59c000-7f0bec59f000 ---p 00000000 00:00 0 
+7f0bec59f000-7f0bec69d000 rw-p 00000000 00:00 0 
+7f0bec69d000-7f0bec6a0000 ---p 00000000 00:00 0 
+7f0bec6a0000-7f0bec79e000 rw-p 00000000 00:00 0 
+7f0bec79e000-7f0bec7a1000 ---p 00000000 00:00 0 
+7f0bec7a1000-7f0bec89f000 rw-p 00000000 00:00 0 
+7f0bec89f000-7f0bec8a2000 ---p 00000000 00:00 0 
+7f0bec8a2000-7f0bec9a0000 rw-p 00000000 00:00 0 
+7f0bec9a0000-7f0bec9a3000 ---p 00000000 00:00 0 
+7f0bec9a3000-7f0becaa1000 rw-p 00000000 00:00 0 
+7f0becaa1000-7f0becaa9000 r-xp 00000000 08:03 431968                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f0becaa9000-7f0becca9000 ---p 00008000 08:03 431968                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f0becca9000-7f0beccaa000 r--p 00008000 08:03 431968                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f0beccaa000-7f0beccab000 rw-p 00009000 08:03 431968                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libmanagement.so
+7f0beccab000-7f0beccac000 ---p 00000000 00:00 0 
+7f0beccac000-7f0becdac000 rw-p 00000000 00:00 0 
+7f0becdac000-7f0becdaf000 ---p 00000000 00:00 0 
+7f0becdaf000-7f0becead000 rw-p 00000000 00:00 0 
+7f0becead000-7f0beceae000 ---p 00000000 00:00 0 
+7f0beceae000-7f0beceb1000 ---p 00000000 00:00 0 
+7f0beceb1000-7f0becfae000 rw-p 00000000 00:00 0 
+7f0becfae000-7f0becfaf000 ---p 00000000 00:00 0 
+7f0becfaf000-7f0becfb2000 ---p 00000000 00:00 0 
+7f0becfb2000-7f0bed0af000 rw-p 00000000 00:00 0 
+7f0bed0af000-7f0bed0b0000 ---p 00000000 00:00 0 
+7f0bed0b0000-7f0bed0b3000 ---p 00000000 00:00 0 
+7f0bed0b3000-7f0bed1b0000 rw-p 00000000 00:00 0 
+7f0bed1b0000-7f0bed1b3000 ---p 00000000 00:00 0 
+7f0bed1b3000-7f0bed2b1000 rw-p 00000000 00:00 0 
+7f0bed2b1000-7f0bed44c000 r--p 00000000 08:03 420858                     /usr/lib/locale/locale-archive
+7f0bed44c000-7f0bed44f000 ---p 00000000 00:00 0 
+7f0bed44f000-7f0bed54d000 rw-p 00000000 00:00 0 
+7f0bed54d000-7f0bed550000 ---p 00000000 00:00 0 
+7f0bed550000-7f0bed64e000 rw-p 00000000 00:00 0 
+7f0bed64e000-7f0bed64f000 ---p 00000000 00:00 0 
+7f0bed64f000-7f0bee6ac000 rw-p 00000000 00:00 0 
+7f0bee6ac000-7f0bee87b000 r--s 03c2b000 08:03 431937                     /usr/lib/jvm/java-8-openjdk/jre/lib/rt.jar
+7f0bee87b000-7f0bef031000 rw-p 00000000 00:00 0 
+7f0bef031000-7f0bef0f1000 ---p 00000000 00:00 0 
+7f0bef0f1000-7f0bf01f1000 rw-p 00000000 00:00 0 
+7f0bf01f1000-7f0bf01f2000 ---p 00000000 00:00 0 
+7f0bf01f2000-7f0bf02f2000 rw-p 00000000 00:00 0 
+7f0bf02f2000-7f0bf02f3000 ---p 00000000 00:00 0 
+7f0bf02f3000-7f0bf03f3000 rw-p 00000000 00:00 0 
+7f0bf03f3000-7f0bf03f4000 ---p 00000000 00:00 0 
+7f0bf03f4000-7f0bf04f4000 rw-p 00000000 00:00 0 
+7f0bf04f4000-7f0bf04f5000 ---p 00000000 00:00 0 
+7f0bf04f5000-7f0bf060b000 rw-p 00000000 00:00 0 
+7f0bf060b000-7f0bf09b5000 ---p 00000000 00:00 0 
+7f0bf09b5000-7f0bf0f35000 rwxp 00000000 00:00 0 
+7f0bf0f35000-7f0bff9b5000 ---p 00000000 00:00 0 
+7f0bff9b5000-7f0bff9bd000 r-xp 00000000 08:03 431975                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f0bff9bd000-7f0bffbbc000 ---p 00008000 08:03 431975                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f0bffbbc000-7f0bffbbd000 r--p 00007000 08:03 431975                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f0bffbbd000-7f0bffbbe000 rw-p 00008000 08:03 431975                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libzip.so
+7f0bffbbe000-7f0bffbc9000 r-xp 00000000 08:03 395350                     /usr/lib/libnss_files-2.26.so
+7f0bffbc9000-7f0bffdc8000 ---p 0000b000 08:03 395350                     /usr/lib/libnss_files-2.26.so
+7f0bffdc8000-7f0bffdc9000 r--p 0000a000 08:03 395350                     /usr/lib/libnss_files-2.26.so
+7f0bffdc9000-7f0bffdca000 rw-p 0000b000 08:03 395350                     /usr/lib/libnss_files-2.26.so
+7f0bffdca000-7f0bffdd0000 rw-p 00000000 00:00 0 
+7f0bffdd0000-7f0bffdfe000 r-xp 00000000 08:03 431955                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f0bffdfe000-7f0bffffd000 ---p 0002e000 08:03 431955                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f0bffffd000-7f0bffffe000 r--p 0002d000 08:03 431955                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f0bffffe000-7f0c00000000 rw-p 0002e000 08:03 431955                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libjava.so
+7f0c00000000-7f0c00add000 rw-p 00000000 00:00 0 
+7f0c00add000-7f0c04000000 ---p 00000000 00:00 0 
+7f0c04000000-7f0c04001000 r--s 00004000 00:28 2460784                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/osgi-resource-locator-1.0.1.jar
+7f0c04001000-7f0c04009000 r--s 00066000 00:28 2460798                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/velocity-1.7.jar
+7f0c04009000-7f0c0400f000 r--s 0004f000 00:28 2460799                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/velocity-tools-2.0.jar
+7f0c0400f000-7f0c04013000 r--s 0001d000 00:28 2460800                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/xbean-spring-3.18.jar
+7f0c04013000-7f0c0401c000 r--s 0002d000 00:28 2460802                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/webapp/WEB-INF/lib/xml-apis-1.4.01.jar
+7f0c0401c000-7f0c0409f000 rw-p 00000000 00:00 0 
+7f0c0409f000-7f0c04121000 ---p 00000000 00:00 0 
+7f0c04121000-7f0c04177000 rw-p 00000000 00:00 0 
+7f0c04177000-7f0c04178000 rw-p 00000000 00:00 0 
+7f0c04178000-7f0c04185000 r-xp 00000000 08:03 431981                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f0c04185000-7f0c04384000 ---p 0000d000 08:03 431981                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f0c04384000-7f0c04386000 r--p 0000c000 08:03 431981                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f0c04386000-7f0c04387000 rw-p 0000e000 08:03 431981                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/libverify.so
+7f0c04387000-7f0c0438e000 r-xp 00000000 08:03 395274                     /usr/lib/librt-2.26.so
+7f0c0438e000-7f0c0458d000 ---p 00007000 08:03 395274                     /usr/lib/librt-2.26.so
+7f0c0458d000-7f0c0458e000 r--p 00006000 08:03 395274                     /usr/lib/librt-2.26.so
+7f0c0458e000-7f0c0458f000 rw-p 00007000 08:03 395274                     /usr/lib/librt-2.26.so
+7f0c0458f000-7f0c046da000 r-xp 00000000 08:03 395334                     /usr/lib/libm-2.26.so
+7f0c046da000-7f0c048d9000 ---p 0014b000 08:03 395334                     /usr/lib/libm-2.26.so
+7f0c048d9000-7f0c048da000 r--p 0014a000 08:03 395334                     /usr/lib/libm-2.26.so
+7f0c048da000-7f0c048db000 rw-p 0014b000 08:03 395334                     /usr/lib/libm-2.26.so
+7f0c048db000-7f0c0557d000 r-xp 00000000 08:03 431987                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f0c0557d000-7f0c0577d000 ---p 00ca2000 08:03 431987                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f0c0577d000-7f0c05811000 r--p 00ca2000 08:03 431987                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f0c05811000-7f0c05839000 rw-p 00d36000 08:03 431987                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/server/libjvm.so
+7f0c05839000-7f0c0586a000 rw-p 00000000 00:00 0 
+7f0c0586a000-7f0c05a18000 r-xp 00000000 08:03 395426                     /usr/lib/libc-2.26.so
+7f0c05a18000-7f0c05c17000 ---p 001ae000 08:03 395426                     /usr/lib/libc-2.26.so
+7f0c05c17000-7f0c05c1b000 r--p 001ad000 08:03 395426                     /usr/lib/libc-2.26.so
+7f0c05c1b000-7f0c05c1d000 rw-p 001b1000 08:03 395426                     /usr/lib/libc-2.26.so
+7f0c05c1d000-7f0c05c21000 rw-p 00000000 00:00 0 
+7f0c05c21000-7f0c05c24000 r-xp 00000000 08:03 395336                     /usr/lib/libdl-2.26.so
+7f0c05c24000-7f0c05e23000 ---p 00003000 08:03 395336                     /usr/lib/libdl-2.26.so
+7f0c05e23000-7f0c05e24000 r--p 00002000 08:03 395336                     /usr/lib/libdl-2.26.so
+7f0c05e24000-7f0c05e25000 rw-p 00003000 08:03 395336                     /usr/lib/libdl-2.26.so
+7f0c05e25000-7f0c05e33000 r-xp 00000000 08:03 431986                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f0c05e33000-7f0c06032000 ---p 0000e000 08:03 431986                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f0c06032000-7f0c06033000 r--p 0000d000 08:03 431986                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f0c06033000-7f0c06034000 rw-p 0000e000 08:03 431986                     /usr/lib/jvm/java-8-openjdk/jre/lib/amd64/jli/libjli.so
+7f0c06034000-7f0c0604a000 r-xp 00000000 08:03 404292                     /usr/lib/libz.so.1.2.11
+7f0c0604a000-7f0c06249000 ---p 00016000 08:03 404292                     /usr/lib/libz.so.1.2.11
+7f0c06249000-7f0c0624a000 r--p 00015000 08:03 404292                     /usr/lib/libz.so.1.2.11
+7f0c0624a000-7f0c0624b000 rw-p 00016000 08:03 404292                     /usr/lib/libz.so.1.2.11
+7f0c0624b000-7f0c06264000 r-xp 00000000 08:03 395446                     /usr/lib/libpthread-2.26.so
+7f0c06264000-7f0c06463000 ---p 00019000 08:03 395446                     /usr/lib/libpthread-2.26.so
+7f0c06463000-7f0c06464000 r--p 00018000 08:03 395446                     /usr/lib/libpthread-2.26.so
+7f0c06464000-7f0c06465000 rw-p 00019000 08:03 395446                     /usr/lib/libpthread-2.26.so
+7f0c06465000-7f0c06469000 rw-p 00000000 00:00 0 
+7f0c06469000-7f0c0648e000 r-xp 00000000 08:03 395427                     /usr/lib/ld-2.26.so
+7f0c0648e000-7f0c0648f000 r--s 00002000 00:28 2456534                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/slf4j-simple-1.7.5.jar
+7f0c0648f000-7f0c06491000 r--s 00005000 00:28 2456533                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/slf4j-api-1.7.5.jar
+7f0c06491000-7f0c06492000 r--s 00002000 00:28 2456532                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/macify-1.6.jar
+7f0c06492000-7f0c06494000 r--s 00004000 00:28 2456531                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jexmec-manager-2.0.0rc7.jar
+7f0c06494000-7f0c06496000 r--s 00001000 00:28 2456530                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jexmec-ctor-pl-2.0.0rc7.jar
+7f0c06496000-7f0c06497000 r--s 00001000 00:28 2456529                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jexmec-api-2.0.0rc7.jar
+7f0c06497000-7f0c06498000 r--s 0000a000 00:28 2456528                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-xml-9.2.3.v20140905.jar
+7f0c06498000-7f0c0649a000 r--s 00019000 00:28 2456527                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-webapp-9.2.3.v20140905.jar
+7f0c0649a000-7f0c064a0000 r--s 0004f000 00:28 2456526                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-util-9.2.3.v20140905.jar
+7f0c064a0000-7f0c064a2000 r--s 0001a000 00:28 2456525                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-servlet-9.2.3.v20140905.jar
+7f0c064a2000-7f0c064a8000 r--s 0005f000 00:28 2456524                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-server-9.2.3.v20140905.jar
+7f0c064a8000-7f0c064ab000 r--s 00015000 00:28 2456523                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-security-9.2.3.v20140905.jar
+7f0c064ab000-7f0c064ad000 r--s 0000c000 00:28 2456522                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-plus-9.2.3.v20140905.jar
+7f0c064ad000-7f0c064af000 r--s 00009000 00:28 2456521                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-jndi-9.2.3.v20140905.jar
+7f0c064af000-7f0c064b2000 r--s 00017000 00:28 2456520                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-io-9.2.3.v20140905.jar
+7f0c064b2000-7f0c064b5000 r--s 0000e000 00:28 2456518                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-console-core-1.56.jar
+7f0c064b5000-7f0c064dd000 rw-p 00000000 00:00 0 
+7f0c064dd000-7f0c06560000 ---p 00000000 00:00 0 
+7f0c06560000-7f0c06561000 ---p 00000000 00:00 0 
+7f0c06561000-7f0c06564000 ---p 00000000 00:00 0 
+7f0c06564000-7f0c06665000 rw-p 00000000 00:00 0 
+7f0c06665000-7f0c06667000 r--s 00018000 00:28 2456519                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-http-9.2.3.v20140905.jar
+7f0c06667000-7f0c06668000 r--s 00001000 00:28 2456517                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-console-api-1.56.jar
+7f0c06668000-7f0c0666a000 r--s 00012000 00:28 2456516                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/jetty-annotations-9.2.3.v20140905.jar
+7f0c0666a000-7f0c0666d000 r--s 00015000 00:28 2456515                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/javax.servlet-api-3.1.0.jar
+7f0c0666d000-7f0c0666f000 r--s 00005000 00:28 2456514                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/javax.annotation-api-1.2.jar
+7f0c0666f000-7f0c06671000 r--s 00006000 00:28 2456513                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/asm-tree-5.0.1.jar
+7f0c06671000-7f0c06673000 r--s 00009000 00:28 2456512                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/asm-commons-5.0.1.jar
+7f0c06673000-7f0c06674000 r--s 0000c000 00:28 2456511                    /tmp/fcrepo-webapp-4.7.3-jetty-console.jar_8984/condi/asm-5.0.1.jar
+7f0c06674000-7f0c06679000 r--s 02d48000 00:28 877051                     /tmp/fcrepo-webapp-4.7.3-jetty-console/fcrepo-webapp-4.7.3-jetty-console.jar
+7f0c06679000-7f0c06683000 rw-p 00000000 00:00 0 
+7f0c06683000-7f0c0668b000 rw-s 00000000 00:28 2459929                    /tmp/hsperfdata_tjohnson/13357
+7f0c0668b000-7f0c0668c000 rw-p 00000000 00:00 0 
+7f0c0668c000-7f0c0668d000 ---p 00000000 00:00 0 
+7f0c0668d000-7f0c0668e000 r--p 00024000 08:03 395427                     /usr/lib/ld-2.26.so
+7f0c0668e000-7f0c0668f000 rw-p 00025000 08:03 395427                     /usr/lib/ld-2.26.so
+7f0c0668f000-7f0c06690000 rw-p 00000000 00:00 0 
+7ffcc7e59000-7ffcc7e7a000 rw-p 00000000 00:00 0                          [stack]
+7ffcc7eec000-7ffcc7eef000 r--p 00000000 00:00 0                          [vvar]
+7ffcc7eef000-7ffcc7ef1000 r-xp 00000000 00:00 0                          [vdso]
+
+VM Arguments:
+jvm_args: -Dfcrepo.log.http.api=WARN -Dfcrepo.log.kernel=ERROR -Dfcrepo.home=tmp/fcrepo4-development-data -Dfcrepo.spring.jms.configuration=file:///home/tjohnson/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/fcrepo_wrapper-0.9.0/data/spring-noop.xml -Xmx512m 
+java_command: /tmp/fcrepo-webapp-4.7.3-jetty-console/fcrepo-webapp-4.7.3-jetty-console.jar --headless --port 8984
+java_class_path (initial): /tmp/fcrepo-webapp-4.7.3-jetty-console/fcrepo-webapp-4.7.3-jetty-console.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=/home/tjohnson/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/bin:/home/tjohnson/.rbenv/versions/2.4.0/bin:/home/tjohnson/.rbenv/libexec:/home/tjohnson/.rbenv/plugins/ruby-build/bin:/home/tjohnson/.rbenv/bin:/home/tjohnson/miniconda3/bin:/home/tjohnson/.rbenv/shims:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/home/tjohnson/.cargo/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xaa8a00], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xaa8a00], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x8df590], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x8df590], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x8df590], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x8df590], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x8df440], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x8df8f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x8df8f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x8df8f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x8df8f0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:NAME="Arch Linux"
+PRETTY_NAME="Arch Linux"
+ID=arch
+ID_LIKE=archlinux
+ANSI_COLOR="0;36"
+HOME_URL="https://www.archlinux.org/"
+SUPPORT_URL="https://bbs.archlinux.org/"
+BUG_REPORT_URL="https://bugs.archlinux.org/"
+
+uname:Linux 4.16.3-1-ARCH #1 SMP PREEMPT Thu Apr 19 09:17:56 UTC 2018 x86_64
+libc:glibc 2.26 NPTL 2.26 
+rlimit: STACK 8192k, CORE infinity, NPROC 30132, NOFILE 4096, AS infinity
+load average:2.00 2.11 1.83
+
+/proc/meminfo:
+MemTotal:        7725356 kB
+MemFree:          122120 kB
+MemAvailable:      32408 kB
+Buffers:            1396 kB
+Cached:          1148480 kB
+SwapCached:            0 kB
+Active:          6344792 kB
+Inactive:         969316 kB
+Active(anon):    6321772 kB
+Inactive(anon):   947304 kB
+Active(file):      23020 kB
+Inactive(file):    22012 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               400 kB
+Writeback:             0 kB
+AnonPages:       6164264 kB
+Mapped:           703076 kB
+Shmem:           1107876 kB
+Slab:             114684 kB
+SReclaimable:      49544 kB
+SUnreclaim:        65140 kB
+KernelStack:       14864 kB
+PageTables:        83004 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3862676 kB
+Committed_AS:   17615356 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:      428956 kB
+DirectMap2M:     7507968 kB
+
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, clmul, erms, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 2893.276
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm cpuid_fault epb pti tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 4990.25
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 2893.289
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm cpuid_fault epb pti tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 4990.25
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 3007.587
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm cpuid_fault epb pti tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 4990.25
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3537U CPU @ 2.00GHz
+stepping	: 9
+microcode	: 0x17
+cpu MHz		: 2984.215
+cache size	: 4096 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx f16c rdrand lahf_lm cpuid_fault epb pti tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms xsaveopt dtherm ida arat pln pts
+bugs		: cpu_meltdown spectre_v1 spectre_v2
+bogomips	: 4990.25
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 7725356k(130688k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (25.162-b12) for linux-amd64 JRE (1.8.0_162-b12), built on Mar  1 2018 16:46:58 by "builduser" with gcc 7.3.0
+
+time: Mon Apr 30 13:47:26 2018
+elapsed time: 4 seconds (0d 0h 0m 4s)
+
