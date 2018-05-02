@@ -47,3 +47,6 @@ bower.json
 .env.development
 .env.production
 .env
+
+# Don't commit database dump files
+dump.rdb
