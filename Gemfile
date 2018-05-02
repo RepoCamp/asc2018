@@ -7,7 +7,6 @@ end
 
 gem 'hyrax', '2.1.0.rc1'
 
-gem 'pg', '~> 0.18'
 gem 'sidekiq'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
