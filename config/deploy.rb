@@ -20,7 +20,6 @@ set :branch, ENV['REVISION'] || ENV['BRANCH_NAME'] || 'master'
 append :linked_dirs, "log"
 append :linked_dirs, "public/assets"
 append :linked_files, "config/secrets.yml"
-append :linked_files, "config/database.yml"
 
 # We have to re-define capistrano-sidekiq's tasks to work with
 # systemctl in production. Note that you must clear the previously-defined
