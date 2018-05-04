@@ -18,6 +18,7 @@ SSHKit.config.command_map[:rake] = 'bundle exec rake'
 set :branch, ENV['REVISION'] || ENV['BRANCH_NAME'] || 'master'
 
 append :linked_dirs, "log"
+append :linked_dirs, "db"
 append :linked_dirs, "public/assets"
 append :linked_files, "config/secrets.yml"
 
