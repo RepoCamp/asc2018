@@ -16,6 +16,8 @@ class ImageIndexer < Hyrax::WorkIndexer
         solr_doc['foobar_ssim'] = ['bar']
       elsif object.foobar == ['bar']
         solr_doc['foobar_ssim'] = ['foo']
+      else
+        solr_doc['foobar_ssim'] = ['foobar']
       end
     end
   end
