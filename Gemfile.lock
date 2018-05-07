@@ -228,8 +228,6 @@ GEM
     ebnf (1.1.2)
       rdf (>= 2.2, < 4.0)
       sxp (~> 1.0)
-    edtf (3.0.4)
-      activesupport (>= 3.0, < 6.0)
     equivalent-xml (0.6.0)
       nokogiri (>= 1.4.3)
     erubi (1.7.1)
@@ -786,7 +784,6 @@ DEPENDENCIES
   devise
   devise-guests (~> 0.6)
   dotenv-rails
-  edtf
   fcrepo_wrapper
   hyrax (= 2.1.0.rc1)
   jbuilder (~> 2.5)
