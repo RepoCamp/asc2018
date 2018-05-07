@@ -6,4 +6,9 @@ RSpec.describe Hyrax::WorkForm do
   let(:ability)    { :none }
   let(:controller) { :none }
   let(:work)       { Work.new }
+
+  it "has the expected terms" do
+    expect(form.terms).to include(:title)
+    expect(form.terms).to include(:year)
+  end
 end
