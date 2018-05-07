@@ -11,6 +11,12 @@ class ImageIndexer < Hyrax::WorkIndexer
 
   def generate_solr_document
     super.tap do |solr_doc|
+      solr_doc['year_ssim'] = object.year
+      if object.foobar == ['foo']
+        solr_doc['foobar_ssim'] = ['bar']
+      elsif object.foobar == ['bar']
+        solr_doc['foobar_ssim'] = ['foo']
+      end
     end
   end
 end
