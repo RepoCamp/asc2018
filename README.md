@@ -33,4 +33,11 @@ $ bin/rails db:setup
 $ bin/rails hyrax:default_admin_set:create
 ```
 
+Make sure you have Redis running (in another separate terminal):
+
+```sh
+$ bundle exec redis-server
+```
+
+
 At this point, you should be able to browse to `http://localhost:3000`, create a new user and deposit an item.
