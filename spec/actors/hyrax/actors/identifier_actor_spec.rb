@@ -12,4 +12,11 @@ RSpec.describe Hyrax::Actors::IdentifierActor do
       .to change { env.attributes['identifier'] }
       .to an_instance_of(String)
   end
+
+  it 'can save with resulting attributes' do
+    actor.create(env)
+
+    expect(Work.new(env.attributes.merge(title: ['Comet in Moominland'])))
+      .to be_valid
+  end
 end
