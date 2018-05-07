@@ -10,7 +10,7 @@ RSpec.describe Hyrax::Actors::IdentifierActor do
   it 'assigns an identifier' do
     expect { actor.create(env) }
       .to change { env.attributes['identifier'] }
-      .to an_instance_of(String)
+      .to a_collection_containing_exactly(an_instance_of(String))
   end
 
   it 'can save with resulting attributes' do
