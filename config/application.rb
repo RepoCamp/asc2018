@@ -14,5 +14,8 @@ module Asc2018
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.to_prepare do
+      Hyrax::CurationConcern.actor_factory.insert_before(Hyrax::Actors::TransactionalRequest, LoggingActor)
+    end
   end
 end
